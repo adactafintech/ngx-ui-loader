@@ -6,13 +6,14 @@
     "prettier": "prettier --write \"**/*.{scss,ts,component.html}\"",
     "start": "ng serve",
     "build": "ng build ngx-ui-loader --configuration production && ng build --configuration production",
-    "build:lib": "ng build ngx-ui-loader --configuration production && cp README.md CHANGELOG.md ./dist/ngx-ui-loader/",
+    "build:lib": "ng build ngx-ui-loader --configuration production && npm run copy-libdocs",
     "build:schematics": "cd projects/ngx-ui-loader && npm run build && cd ../..",
     "test": "ng test ngx-ui-loader --code-coverage --browsers ChromeHeadless --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ngcc",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "copy-libdocs": "copyfiles -V -E README.md CHANGELOG.md ./dist/ngx-ui-loader/"
   },
   "private": true,
   "dependencies": {
@@ -30,7 +31,8 @@
     "ngx-color-picker": "^11.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "copyfiles": "2.4.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.2.16",
