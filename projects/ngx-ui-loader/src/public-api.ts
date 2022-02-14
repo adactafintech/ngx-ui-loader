@@ -17,3 +17,9 @@ export {
 } from './lib/utils/interfaces';
 export { NgxUiLoaderRouterModule } from './lib/router/ngx-ui-loader-router.module';
 export { NgxUiLoaderHttpModule } from './lib/http/ngx-ui-loader-http.module';
+
+/*
+ * Angular 13 Ivy NG3001
+ */
+export { NgxUiLoaderBlurredDirective } from './lib/core/ngx-ui-loader-blurred.directive';
+export { NgxUiLoaderComponent } from './lib/core/ngx-ui-loader.component';
